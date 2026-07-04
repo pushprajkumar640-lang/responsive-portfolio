@@ -335,40 +335,57 @@ color:#FFD93D;
 transform:scale(1.2);
 }
 
-/* ===== Dark Mode ===== */
+/* ===========================
+   Dark Mode
+=========================== */
 
-body.dark{
+body:has(#dark-mode-toggle:checked){
     background:#0f172a;
     color:#ffffff;
+    transition:.4s;
 }
 
-body.dark header{
+body:has(#dark-mode-toggle:checked) header{
     background:#111827;
 }
 
-body.dark .skill-card,
-body.dark .project-card{
-    background:#1e293b;
+body:has(#dark-mode-toggle:checked) .logo{
+    color:#FFD93D;
+}
+
+body:has(#dark-mode-toggle:checked) .nav-links a{
     color:#ffffff;
 }
 
-body.dark input,
-body.dark textarea{
+body:has(#dark-mode-toggle:checked) .nav-links a:hover{
+    color:#FFD93D;
+}
+
+body:has(#dark-mode-toggle:checked) .skill-card,
+body:has(#dark-mode-toggle:checked) .project-card{
     background:#1e293b;
     color:#ffffff;
     border:1px solid #334155;
 }
 
-body.dark footer{
-    background:#020617;
+body:has(#dark-mode-toggle:checked) input,
+body:has(#dark-mode-toggle:checked) textarea{
+    background:#1e293b;
+    color:#ffffff;
+    border:1px solid #475569;
 }
 
-body.dark .nav-links a{
+body:has(#dark-mode-toggle:checked) .btn{
+    background:linear-gradient(90deg,#2563eb,#7c3aed);
+}
+
+body:has(#dark-mode-toggle:checked) .btn-outline{
+    border:2px solid #ffffff;
     color:#ffffff;
 }
 
-body.dark .btn{
-    background:linear-gradient(90deg,#2563eb,#7c3aed);
+body:has(#dark-mode-toggle:checked) footer{
+    background:#020617;
 }
 
 /* ===========================
